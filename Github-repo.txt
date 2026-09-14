@@ -1,0 +1,237 @@
+This project demonstrates basic Git version control operations using a simple Python application. The objective was to initialize a Git repository, track files, create commits, and review the repository history.
+
+
+## Project Structure
+
+ 
+
+```text
+
+git-task/
+
+
+
+├── hello_world.py
+
+└── README.md
+
+## Python Script
+
+### hello_world.py
+
+```python
+
+print('git is Awesome!')
+
+### Expected Output
+
+ 
+
+```text
+
+git is Awesome!
+
+```
+
+ 
+
+## Git Commands Executed
+
+ 
+
+### Verify Git Installation
+
+ 
+
+```bash
+
+git --version
+
+```
+
+ 
+
+Output:
+
+ 
+
+```text
+
+git version 2.54.0.windows.1
+
+
+ 
+
+### Initialize Git Repository
+
+```bash
+
+git init
+
+ 
+
+### Check Repository Status
+
+```bash
+
+git status
+
+```
+
+ 
+
+Output:
+
+ 
+
+```text
+
+On branch master
+
+ 
+
+No commits yet
+
+ 
+
+Changes to be committed:
+
+new file: hello_world.py
+
+```
+
+### Add File to Staging Area
+ 
+
+```bash
+
+git add hello_world.py
+```
+
+### Create Initial Commit
+
+```bash
+
+git commit -m "Hello world"
+
+```
+Output:
+
+
+```text
+[master (root-commit) bc391a0] Hello world
+
+1 file changed
+
+create mode 100644 hello_world.py
+
+```
+
+ 
+
+### Verify Commit History
+
+ 
+
+```bash
+
+git log
+
+```
+
+ 
+
+Output:
+
+ 
+
+```text
+
+commit bc391a0...
+
+Author: Henri Kyalu-Katompe
+
+Date: Sun Sep 13 12:30:35 2026 +0200
+
+ 
+
+Hello world
+
+```
+
+ 
+
+### Confirm Clean Working Tree
+
+ 
+
+```bash
+
+git status
+
+```
+
+ 
+
+Output:
+
+ 
+111
+```text
+
+On branch master
+
+nothing to commit, working tree clean
+
+```
+
+ 
+
+## Git Workflow Summary
+
+ 
+
+```bash
+
+git --version
+
+git init
+
+git status
+
+git add hello_world.py
+
+git commit -m "Hello world"
+
+git log
+
+git status
+
+```
+
+## Skills Demonstrated
+
+- Git installation verification
+
+- Repository initialization
+
+- Tracking files with Git
+
+- Staging changes using `git add`
+- Creating commits using `git commit`
+
+- Viewing commit history with `git log`
+
+- Checking repository status with `git status`
+
+ 
+
+## Author
+
+**Henri Kyalu-Katompe**
+
+## Conclusion
+
+ 
+
+This exercise successfully demonstrated the basic Git workflow from repository initialization through to commit creation and history verification. The repository is currently clean and contains a tracked Python script that prints a simple message to the console.
