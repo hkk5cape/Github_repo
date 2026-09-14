@@ -1,33 +1,43 @@
-Git Task - Hello World 
+# Finance Calculator
 
-This document summarizes the Git exercises performed for the Hello World Python project. 
+## Overview
+The Finance Calculator is a Python application that allows users to calculate investment returns and bond repayments.
 
-Project Structure 
+## Features
+- Investment calculations using Simple Interest
+- Investment calculations using Compound Interest
+- Bond repayment calculations
+- User-friendly menu system
+- Input validation for menu selections
 
-git-task/ 
-├── hello_world.py 
-└── README.md 
+## Requirements
+- Python 3.x
+- math module (included with Python)
 
-Python Script 
+## Running the Program
 
-print('git is Awesome!') 
+```bash
+python finance_calculator.py
+```
 
-Git Workflow Performed 
+## Investment Formulae
 
-Verified Git installation using git --version 
+Simple Interest:
+A = P(1 + rt)
 
-Initialized repository using git init 
+Compound Interest:
+A = P(1 + r)^t
 
-Checked repository status with git status 
+## Bond Formula
 
-Staged file using git add hello_world.py 
+Repayment = (i × P) / (1 - (1 + i)^(-n))
 
-Created initial commit with message Hello world 
+## Project Structure
 
-Viewed commit history using git log 
+Finance_Calculator/
+├── finance_calculator.py
+├── README.md
+└── .gitignore
 
-Verified working tree was clean 
-
-Author 
-
+## Author
 Henri Kyalu-Katompe

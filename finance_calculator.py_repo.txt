@@ -1,0 +1,56 @@
+## Import math
+import math
+
+## Main menu
+print("Investment - to calculate the amount of interest you'll earn on your investment.")
+print("Bond       - to calculate the amount you'll have to pay on a home loan.")
+
+##  user Option 
+option = input("Enter either 'investment' or 'bond' from the menu above to proceed: ").lower()
+
+##  Investiment Option
+if option == "investment":
+    
+    ## User inputs
+    deposit = float(input("Please Enter the amount of money you are depositing: "))
+    interest_rate = float(input("Please Enter the interest rate (e.g. 8 for 8%): "))
+    years = int(input("Please Enter the number of years you plan on investing: "))
+    
+    ## Convert interest rate to decimal
+    r = interest_rate / 100
+
+    # Ask for interest type
+    interest = input("Do you want 'simple' or 'compound' interest? ").upper()
+
+    if interest == "simple":
+        ### Simple Interest 
+        amount = deposit * (1 + r * years)
+        print(f"\nTotal amount after {years} years (Simple Interest): R {amount:.2f}")
+
+    elif interest == "compound":
+        ### Compound Interest 
+        amount = deposit * math.pow((1 + r), years)
+        print(f"\nTotal amount after {years} years (Compound Interest): R {amount:.2f}")
+
+    else:
+        print("Please choose 'simple' or 'compound'")
+
+##   Bond Option 
+elif option == "bond":
+    
+    # ##User inputs
+    house_value = float(input("Please Enter the present value of the house: "))
+    interest_rate = float(input("Please Enter the annual interest rate: "))
+    months = int(input("Please Enter the number of months : "))
+    
+    # ##Monthly interest rate
+    i = (interest_rate / 100) / 12
+
+    ## Bond re-payment  
+    repayment = (i * house_value) / (1 - (1 + i) ** (-months))
+
+    print(f"\nYour monthly bond repayment will be: R {repayment:.2f}")
+
+# #Invalid Selection
+else:
+    print("Invalid selection.")
